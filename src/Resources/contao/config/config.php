@@ -8,3 +8,7 @@
  * @license   https://www.contao-estatemanager.com/lizenzbedingungen.html
  */
 
+
+if(ContaoEstateManager\GoogleAutocomplete\AddonManager::valid()) {
+
+}
