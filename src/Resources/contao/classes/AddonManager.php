@@ -20,7 +20,7 @@ class AddonManager
      * Bundle name
      * @var string
      */
-    public static $bundle = 'EstateManagerAutocomplete';
+    public static $bundle = 'EstateManagerGoogleAutocomplete';
 
     /**
      * Package
