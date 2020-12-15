@@ -15,13 +15,18 @@
       "name":"Daniele Sciannimanica",
       "homepage":"https://github.com/doishub",
       "role":"Developer"
+    },
+    {
+      "name":"Fabian Ekert",
+      "homepage":"https://github.com/eki89",
+      "role":"Developer"
     }
   ],
   "require":{
     "php":">=7.1",
     "contao/core-bundle":"^4.4",
-    "contao-estatemanager/google-services": "^1.0",
-    "contao-estatemanager/core": "^1.0.3"
+    "contao-estatemanager/core": "^1.0.3",
+    "contao-estatemanager/google-services": "^1.0"
   },
   "require-dev": {
     "contao/manager-plugin": "^2.0"
@@ -46,7 +51,7 @@
   },
   "extra":{
     "branch-alias": {
-      "dev-master": "1.0.x-dev"
+      "dev-main": "1.0.x-dev"
     },
     "contao-manager-plugin": "ContaoEstateManager\\GoogleAutocomplete\\ContaoManager\\Plugin"
   }

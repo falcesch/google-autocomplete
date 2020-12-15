@@ -8,7 +8,18 @@
  * @license   https://www.contao-estatemanager.com/lizenzbedingungen.html
  */
 
+// ESTATEMANAGER
+$GLOBALS['TL_ESTATEMANAGER_ADDONS'][] = array('ContaoEstateManager\GoogleAutocomplete', 'AddonManager');
 
 if(ContaoEstateManager\GoogleAutocomplete\AddonManager::valid()) {
+    // Add real estate filter items
+    $GLOBALS['TL_RFI']['locationGoogle'] = 'ContaoEstateManager\GoogleAutocomplete\FilterLocationGoogle';
+    $GLOBALS['TL_RFI']['radiusGoogle']   = 'ContaoEstateManager\GoogleAutocomplete\FilterRadiusGoogle';
 
+    // Hooks
+    $GLOBALS['TL_HOOKS']['getTypeParameter'][]         = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
+    $GLOBALS['TL_HOOKS']['getParameterByGroups'][]     = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
+    $GLOBALS['TL_HOOKS']['getTypeParameterByGroups'][] = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
+    $GLOBALS['TL_HOOKS']['addRealEstateSorting'][]     = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'addRealEstateSorting');
+    $GLOBALS['TL_HOOKS']['prepareFilterData'][]        = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'resetLocationFilter');
 }

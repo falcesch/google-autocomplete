@@ -1,0 +1,3 @@
+<?php
+
+$GLOBALS['TL_JAVASCRIPT'][] = 'bundles/estatemanagergoogleautocomplete/google-places-filter/google-places-filter.js|static';
