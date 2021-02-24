@@ -41,7 +41,7 @@ class FilterRadiusGoogle extends FilterWidget
      *
      * @var string
      */
-    protected $strPrefix = 'widget widget-radius-google';
+    protected $strPrefix = 'widget widget-select widget-radius-google';
 
     /**
      * Initialize the object
