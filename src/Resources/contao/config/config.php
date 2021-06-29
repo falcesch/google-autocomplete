@@ -19,6 +19,7 @@ if(ContaoEstateManager\GoogleAutocomplete\AddonManager::valid()) {
     // Hooks
     $GLOBALS['TL_HOOKS']['getTypeParameter'][]         = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
     $GLOBALS['TL_HOOKS']['getParameterByGroups'][]     = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
+    $GLOBALS['TL_HOOKS']['getParameterByTypes'][]      = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
     $GLOBALS['TL_HOOKS']['getTypeParameterByGroups'][] = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'setLocationParameter');
     $GLOBALS['TL_HOOKS']['addRealEstateSorting'][]     = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'addRealEstateSorting');
     $GLOBALS['TL_HOOKS']['prepareFilterData'][]        = array('ContaoEstateManager\GoogleAutocomplete\Filter', 'resetLocationFilter');
