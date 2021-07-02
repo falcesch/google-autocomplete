@@ -209,6 +209,8 @@ var GooglePlacesFilter = (function () {
 
         var onSubmitLocation = function (event) {
             if (event.which == 13 || event.keyCode === 13) {
+                // select first element in the list
+                setTimeout(()=>{filter.dom.value = filter.autocomplete.gm_accessors_.place.Ij.i[0].W[0]}, 1);
                 event.preventDefault();
             }
         };
