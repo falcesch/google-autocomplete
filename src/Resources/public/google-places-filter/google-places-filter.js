@@ -191,12 +191,12 @@ var GooglePlacesFilter = (function () {
         };
 
         var resetRadiusField = function (place) {
-            if (place && filter.dom.value !== '' && (place.types.includes('street_address') || place.types.includes('route') || place.types.includes('premise'))) {
+            if (place.types && filter.dom.value !== '' && (place.types.includes('street_address') || place.types.includes('route') || place.types.includes('premise'))) {
                 if (filter.radiusField.selectedIndex === 0) {
                     filter.radiusField.selectedIndex = filter.settings.selectedRadiusIndex;
                 }
                 filter.radiusField.options[0].style.display = 'none';
-            } else if (place && filter.dom.value !== '' && filter.settings.forceRadius && (place.types.includes('locality') || place.types.includes('postal_code') || place.types.includes('sublocality'))) {
+            } else if (place.types && filter.dom.value !== '' && filter.settings.forceRadius && (place.types.includes('locality') || place.types.includes('postal_code') || place.types.includes('sublocality'))) {
                 if (filter.radiusField.selectedIndex === 0) {
                     filter.radiusField.selectedIndex = filter.settings.selectedRadiusIndex;
                 }
